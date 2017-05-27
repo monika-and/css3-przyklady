@@ -1,0 +1,111 @@
+/** background-color: burleywood; */
+
+p {
+    background-color: cadetblue;
+}
+
+/* pesudo-selektory */
+#par1::before, #par1::after {
+    content: '*';
+    color: #fff;
+    font-size: 3em;
+}
+
+#par2::first-line {
+    color: yellow;
+}
+
+#par1::first-letter {
+    font-size: 10em;
+}
+
+/* pseudo-klasy */
+a:visited {
+    color:crimson;
+}
+
+a:hover {
+    color:green;
+    font-size: 2em;
+}
+
+a:active {
+    color: orange;
+}
+
+input:focus {
+    background-color: red;
+}
+
+p:target {
+    background-color: cyan;
+}
+
+p:lang(pl) {
+    background-color: aliceblue;
+}
+
+li:first-child {
+    font-size: 2em;
+}
+
+li:last-child {
+    font-size: 2em;
+}
+
+p span:only-child {
+    text-decoration: line-through;
+}
+
+div:empty {
+    width: 600px;
+    height: 200px;
+    background-color: blue;
+}
+
+li:nth-child(odd) {
+    background-color: purple;
+}
+
+li:nth-child(4) {
+    background-color: orange;
+}
+
+li:nth-child(3n) {
+    background-color: fuchsia;
+}
+
+li:nth-child(2n+3):hover {
+    background-color: gray;
+}
+/* kolejne dwukropki pozwalają nam na łączenie pseudoseklektorów div:first child:hover - głównie dotyczy hovera */
+
+/* selektory atrybutów */
+
+input[title] {
+    background-color: aqua;
+}
+
+input[type="text"] {
+    background-color: red;
+}
+
+input[title="tytuł"] {
+    background-color: grey;
+}
+
+input[title~="po"] {
+    background-color: darkgoldenrod;
+}
+
+input[title*="tyt"] {
+    background-color: darkolivegreen;
+}
+
+input[title^="tytuł"] {
+    background-color: deeppink;
+}
+
+input[title$="tytuł"] {
+    background-color: yellow;
+}
